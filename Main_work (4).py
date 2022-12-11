@@ -25,7 +25,7 @@ def get_functions(GM,components,t):
     return GM,Mu_matrix,Hessian_matrix,ln
     
 if __name__=="__main__":  
- with open('/home/harpreetk/Documents/textfile.txt','r') as file:
+ with open("Path of text file containing Gibb's Function",'r') as file:
     lines=file.readlines()
     flag = 0
     index = 0
