@@ -16,6 +16,7 @@ from scipy import interpolate
 from scipy.interpolate import UnivariateSpline
 import pandas as pd
 
+# Function to get Hessian Components. 
 def get_hessian(dbf_sys, component_sys,comp1, comp2, Phases):
   mod = Model(dbf_sys, component_sys, Phases)  
   my_list = [v.Y(Phases,0,comp1), v.Y(Phases,0,comp2), v.T]
@@ -24,20 +25,15 @@ def get_hessian(dbf_sys, component_sys,comp1, comp2, Phases):
   hess_comp = gm_der.diff(my_list[0]) - gm_der.diff(my_list[1])
   return hess_comp
   
-
-
-
-
+# Main Function.
 if __name__=="__main__":
- dbf = Database('/home/harpreetk/Downloads/alzn_mey.tdb')
+ dbf = Database('Path of TDB file')
+# enter components and phase.
  components = ['AL','ZN']
  c_1 = v.Species('AL')
  c_2 = v.Species('ZN')
  phases = 'LIQUID' 
- 
  hessian = get_hessian(dbf,components, c_1, c_2, phases)
- 
- 
  fig = plt.figure(figsize=(9,6))
  ax = fig.gca()
 
@@ -64,7 +60,6 @@ if __name__=="__main__":
 
  #data fitting
  x = AL_array
-
  y = GM_array
 
 
