@@ -10,3 +10,7 @@ The function taken as input was as a string so  parse_expr() was used to convert
 
 To get the c code for each function in same c file, we have to combine everything in a matrix and give that as input. So matrix was created named Matrix. 
 sympy.utilities.codegen import codegen is used to generate the c code.
+
+alzn_mey.tdb contains thermodynamic database of an binary Al-Zn system.
+
+
