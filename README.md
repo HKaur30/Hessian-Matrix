@@ -13,4 +13,4 @@ sympy.utilities.codegen import codegen is used to generate the c code.
 
 alzn_mey.tdb contains thermodynamic database of an binary Al-Zn system.
 
-
+thermo.c.txt contains generated c code.
